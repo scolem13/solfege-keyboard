@@ -392,7 +392,7 @@ function AudioSynthView() {
 	window.addEventListener('keyup', fnRemoveKeyBinding);
 	document.getElementById('-_OCTAVE').addEventListener('click', function() { fnChangeOctave(-1); });
 	document.getElementById('+_OCTAVE').addEventListener('click', function() { fnChangeOctave(1); });
-	document.getElementById('do-selector').addEventListener('click', function() { fnCreateKeyboard(); });
+	document.getElementById('do-selector').addEventListener('mouseout', function() { fnCreateKeyboard(); });
 	
 	Object.defineProperty(this, 'draw', {
 		value: fnCreateKeyboard
